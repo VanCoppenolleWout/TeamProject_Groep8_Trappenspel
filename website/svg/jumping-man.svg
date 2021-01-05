@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="114" height="90.584" viewBox="0 0 114 90.584">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_9" data-name="Rectangle 9" width="114" height="90.584" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="jumping-man" clip-path="url(#clip-path)">
+    <g id="rectangle1" transform="translate(17.782 69.528)">
+      <path id="Vector" d="M111.428,417.113h-8.949a1.142,1.142,0,0,1-1.141-1.141v-18.6a1.142,1.142,0,0,1,1.141-1.141h8.949a1.142,1.142,0,0,1,1.141,1.141v18.6a1.142,1.142,0,0,1-1.141,1.141Z" transform="translate(-101.338 -396.232)" fill="#2fe56c"/>
+    </g>
+    <g id="rectangle4" transform="translate(81.677 4.866)">
+      <path id="Vector_3" d="M475.557,113.362h-8.949a1.142,1.142,0,0,1-1.141-1.141V28.872a1.142,1.142,0,0,1,1.141-1.141h8.949a1.142,1.142,0,0,1,1.141,1.141v83.349a1.142,1.142,0,0,1-1.141,1.141Z" transform="translate(-465.467 -27.732)" fill="#e52f48"/>
+    </g>
+    <g id="bottom-line" transform="translate(0.001 90.092)">
+      <path id="Vector_15" d="M113.794,513.844H.212a.209.209,0,0,1,0-.418H113.794a.209.209,0,0,1,0,.418Z" transform="translate(-0.003 -513.426)" fill="#3f3d56"/>
+    </g>
+    <g id="rectangle2" transform="translate(60.056 28.818)">
+      <path id="Vector_3-2" data-name="Vector_3" d="M475.557,88.944h-8.949a1.405,1.405,0,0,1-.806-.239.723.723,0,0,1-.334-.576V28.547a.722.722,0,0,1,.334-.576,1.4,1.4,0,0,1,.806-.239h8.949a1.4,1.4,0,0,1,.806.239.722.722,0,0,1,.334.576V88.129a.722.722,0,0,1-.334.576A1.4,1.4,0,0,1,475.557,88.944Z" transform="translate(-465.467 -27.732)" fill="#dad1d1"/>
+    </g>
+    <g id="rectangle3" transform="translate(39.137 51.979)">
+      <path id="Vector_3-3" data-name="Vector_3" d="M475.557,65.783h-8.949a2.062,2.062,0,0,1-.806-.149c-.214-.1-.334-.224-.334-.358V28.238c0-.134.121-.263.334-.358a2.061,2.061,0,0,1,.806-.149h8.949a2.06,2.06,0,0,1,.806.149c.214.1.334.224.334.358V65.277c0,.134-.121.263-.334.358A2.061,2.061,0,0,1,475.557,65.783Z" transform="translate(-465.467 -27.732)" fill="#dad1d1"/>
+    </g>
+  </g>
+</svg>
