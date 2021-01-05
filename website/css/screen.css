@@ -34,7 +34,7 @@
 
     --global-color-neutral-xxxx-light: #DCDAE0;
     --global-color-neutral-xxx-light: #A2A1A6;
-    --global-color-neutral-xx-light: #C8C6CC;
+    --global-color-neutral-xx-light: #F2E4E4;
     --global-color-neutral-light: #FFFFFF;
     
     --global-color-background: #F6F5F7;
@@ -73,6 +73,7 @@
 
     /* forms */
     --global-input-focus-boxShadowSpread: 0px 0px 7px 0px rgba(0,0,0,0.16);
+    --global-input-focus-boxShadowSpread-text: 0px 3px 6px rgba(0,0,0,0.16);
     --global-input-backgroundColor: var(--global-color-neutral-light);
     --global-input-borderColor: var(--global-color-neutral-xxx-light);
     --global-input-hover-borderColor: var(--global-color-neutral-xx-light);
@@ -99,6 +100,11 @@ html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.score-page {
+    background-color: var(--global-color-alpha-dark);
+    height: 100%;
 }
 
 *,
@@ -325,6 +331,12 @@ input:disabled {
     position: relative;
 }
 
+.o-section-list {
+    background-color: var(--global-color-neutral-light);
+    padding-top: var(--global-whitespace-lg);
+    border-radius: 20px 20px 0 0;
+}
+
 .o-section + .o-section {
     padding-top: 8px;
 }
@@ -337,7 +349,13 @@ input:disabled {
 
 .o-list {
     list-style: none;
-    padding: 0;
+    border-top: 1px solid #E2E2E2;
+    padding: 9px 24px;
+    margin-bottom: 0;
+}
+
+.o-header {
+    margin-bottom: calc(var(--global-whitespace-xxl) * 1.25);
 }
 
 /*
@@ -407,6 +425,25 @@ input:disabled {
     margin-bottom: var(--global-whitespace);
 }
 
+.o-layout__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.o-layout__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.o-layout__list-item {
+    display: flex;
+    flex-direction: row;
+}
+
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
@@ -432,10 +469,13 @@ input:disabled {
     margin-right: calc(var(--global-whitespace) - 4px);
 }
 
+.c-card__body-score {
+    margin-top: var(--global-whitespac-md);
+}
+
 .c-card__title {
     font-size: 1.5em;
     font-weight: 500;
-    margin-bottom: calc(var(--global-whitespace-xxl) * 1.25);
     color: var(--global-color-neutral-light);
     text-align: center;
 }
@@ -452,26 +492,104 @@ input:disabled {
     margin-bottom: var(--global-baseline);
 }
 
-.c-card__textarea {
-    width: 100%;
-    height: 10em;
-    resize: none;
-    color: var(--global-color-neutral-xxx-light);
-    border-radius: var(--global-borderRadius);
-    border: var(--global-borderWidth) solid var(--global-color-neutral-xxxx-light);
-    padding: var(--global-whitespace-md);
-}
-
-.c-card__steps {
-    font-size: 0.875em;
-    color: var(--global-color-neutral-xxx-light);
+.c-card__name {
+    color: var(--global-color-neutral-light);
+    font-weight: 600;
     margin-bottom: 0;
 }
-.c-card__loadingbar {
-    height: 0.5em;
-    width: 200px;
-    border-radius: calc(var(--global-borderRadius)*6);
-    background-color: var(--global-color-alpha);
+
+.c-card__score {
+    font-size: 0.75em;
+    color: var(--global-color-neutral-xx-light);
+    font-weight: 600;
+    margin-bottom: var(--global-whitespace-sm);
+}
+
+/*
+    Component: Podium
+    ---
+    Hier wordt het volledige podium opgemaakt
+*/
+
+.o-layout__top3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: var(--global-whitespace-md);
+    margin-right: var(--global-whitespace-md);
+}
+
+.o-layout__individueel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.c-card__podium1 {
+    border-radius: 5px 5px 0 0;
+    height: 5.5em;
+    width: 5em;
+    color: var(--global-color-neutral-light);
+    text-align: center;
+    background-color: #FF856F;
+    padding-top: var(--global-whitespace-md);
+}
+
+.c-card__podium2 {
+    border-radius: 5px 5px 0 0;
+    height: 5.5em;
+    width: 5em;
+    color: var(--global-color-neutral-light);
+    text-align: center;
+    background-color: #97E4EE;
+    padding-top: var(--global-whitespace-md);
+}
+
+.c-card__podium3 {
+    border-radius: 5px 5px 0 0;
+    height: 5.5em;
+    width: 5em;
+    color: var(--global-color-neutral-light);
+    text-align: center;
+    background-color: #B3D3FF;
+    padding-top: var(--global-whitespace-md);
+}
+
+.c-position {
+    font-size: 1.75em;
+    font-weight: 600;
+    text-shadow: var(--global-input-focus-boxShadowSpread-text);
+}
+
+/*
+    Component: List items
+    ---
+    Hier komt de opmaak van de list items
+*/
+
+.c-list__position {
+    font-weight: 500;
+    margin-right: var(--global-whitespace-lg);
+}
+
+.c-list__name {
+
+}
+
+.c-list__score {
+    font-weight: 500;
+    color: var(--global-color-text);
+}
+/*
+    Component: Empty div's
+    ---
+    Hier komen empty divs om plaats te vullen / flexbox te gebruiken
+*/
+
+.c-empty {
+    width: 1.25em;
+    height: 1.25em;
 }
 
 /*
