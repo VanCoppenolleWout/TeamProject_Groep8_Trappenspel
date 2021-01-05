@@ -94,7 +94,8 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    background-color: var(--global-color-alpha);
+    height: 100%;
+    background-color: var(--global-color-neutral-light);
     font-family: "Open Sans", Helvetica, arial, sans-serif;
     color: var(--global-color-neutral-xxx-dark);
     box-sizing: border-box;
@@ -104,6 +105,10 @@ html {
 
 .score-page {
     background-color: var(--global-color-alpha-dark);
+}
+
+.login-page {
+    background-color: var(--global-color-alpha);
     height: 100%;
 }
 
@@ -333,8 +338,13 @@ input:disabled {
 
 .o-section-list {
     background-color: var(--global-color-neutral-light);
-    padding-top: var(--global-whitespace-lg);
+    padding-top: var(--global-whitespace);
     border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    /* height: calc(100vh - 320px); */
 }
 
 .o-section + .o-section {
@@ -416,6 +426,15 @@ input:disabled {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.o-layout__btnscore {
+    margin: 0 var(--global-whitespace);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: var(--global-whitespace);
+    position: fixed;
 }
 
 .o-layout__steps {
@@ -515,6 +534,7 @@ input:disabled {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-end;
     margin-left: var(--global-whitespace-md);
     margin-right: var(--global-whitespace-md);
 }
@@ -528,7 +548,7 @@ input:disabled {
 
 .c-card__podium1 {
     border-radius: 5px 5px 0 0;
-    height: 5.5em;
+    height: 7.5em;
     width: 5em;
     color: var(--global-color-neutral-light);
     text-align: center;
@@ -548,12 +568,12 @@ input:disabled {
 
 .c-card__podium3 {
     border-radius: 5px 5px 0 0;
-    height: 5.5em;
+    height: 3.5em;
     width: 5em;
     color: var(--global-color-neutral-light);
     text-align: center;
     background-color: #B3D3FF;
-    padding-top: var(--global-whitespace-md);
+    padding-top: calc(var(--global-whitespace-sm) + 2px);
 }
 
 .c-position {
@@ -588,8 +608,8 @@ input:disabled {
 */
 
 .c-empty {
-    width: 1.25em;
-    height: 1.25em;
+    width: 1.5em;
+    height: 1.5em;
 }
 
 /*
@@ -660,7 +680,6 @@ input:disabled {
     background-image: var(--global-color-alpha-dark-linear);
     box-shadow: var(--global-input-focus-boxShadowSpread);
 }
-
 
 .c-button:hover {
     background-color: var(--global-color-alpha-light);
