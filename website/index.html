@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trappenspel</title>
+
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+    <script src="./script/app.js"></script>
+</head>
+<body>
+    <h2>Trappen configureren</h2>
+    <form class="js-quantity">
+        <label for="quantity">Aantal trappen: (veelvoud van 2 en groter dan 1)</label>
+        <input class="js-quantity-steps" type="number" name="quantity" id="quantity" min="1" value="10">
+        <br>
+        <button class="js-button-quantity">Submit</button>
+        <p class="js-quantity-steps-answer"></p>
+    </form>
+
+    <h2>Spel starten</h2>
+    <form class="js-game">
+        <label for="name">Naam:</label>
+        <input class="js-game-name" type="text" id="name" required>
+        <br>
+        <label for="difficulty">Moeilijkheidsgraad:</label>
+        <select class="js-game-difficulty" name="difficulty" id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="normal">Normal</option>
+            <option value="hard">Hard</option>
+        </select>
+        <br>
+        <button class="js-button-start">Submit</button>
+        <p class="js-game-answer"></p>
+    </form>
+
+    <h2>Spel stoppen</h2>
+    <form>
+        <button class="js-button-stop">Submit</button>
+    </form>
+
+    <h2>Game</h2>
+    <p class="js-gamestart-start">Spel is nog niet gestart</p>
+    <p class="js-gamestart-name"></p>
+    <p class="js-gamestart-score"></p>
+</body>
+</html>
